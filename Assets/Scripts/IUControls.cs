@@ -12,7 +12,7 @@ public class IUControls : MonoBehaviour
     public GameObject DeathUI;
     public GameObject RegularUI;
     public GameObject WinUI;
-   
+    public int LvlNow;
     
     PlayerMovement PM;
     // Start is called before the first frame update
@@ -23,18 +23,19 @@ public class IUControls : MonoBehaviour
         DeathUI.SetActive(false);
         WinUI.SetActive(false);
         LVL = SceneManager.GetActiveScene().buildIndex;
-
+        LvlNow = LVL++;
         LVLCheck();
     }
     void Start()
     {
-        
 
+        
        
     }
     public void LVLCheck()
     {
-        if (LVL < 0)
+        text.text = "Level " + LvlNow.ToString() ;
+        /*if (LVL < 0)
         {
             text.text = "Level 1";
         }
@@ -45,7 +46,9 @@ public class IUControls : MonoBehaviour
         else
         {
             text.text = "Level 2";
-        }
+        }*/
+
+
     }
 
     public void Death()
