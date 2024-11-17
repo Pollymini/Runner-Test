@@ -35,18 +35,7 @@ public class IUControls : MonoBehaviour
     public void LVLCheck()
     {
         text.text = "Level " + LvlNow.ToString() ;
-        /*if (LVL < 0)
-        {
-            text.text = "Level 1";
-        }
-        else if (LVL > 1)
-        {
-            text.text = "Level 3";
-        }
-        else
-        {
-            text.text = "Level 2";
-        }*/
+       
 
 
     }

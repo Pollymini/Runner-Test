@@ -372,6 +372,7 @@ MonoBehaviour:
   DeathUI: {fileID: 5565992313933914305}
   RegularUI: {fileID: 6568971472541934985}
   WinUI: {fileID: 584171825913115915}
+  LvlNow: 0
 --- !u!1 &1862126127597794198
 GameObject:
   m_ObjectHideFlags: 0
