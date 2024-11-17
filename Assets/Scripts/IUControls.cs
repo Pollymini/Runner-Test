@@ -81,6 +81,18 @@ public class IUControls : MonoBehaviour
         }
         
     }
+    public void LoadWinterLVL()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+    }
+    public void LoadSummerLVL()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+    public void LoadSpringLVL()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+    }
 
 }
         
