@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEditor.PlayerSettings;
+
+
 using UnityEngine.UI;
 
 
@@ -142,6 +142,13 @@ public class PlayerMovement : MonoBehaviour
         Live = false;
         SD.SetActive(true);
         Player.SetActive(false);
+    }
+    public void NextLVL()
+    {
+        Win = false;
+        Live = true;
+        SD.SetActive(false);
+        Player.SetActive(true);
     }
 }
        

@@ -1,18 +1,26 @@
 using Dreamteck.Splines.Primitives;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IUControls : MonoBehaviour
 {
+    public GameObject[] LvlCount;
+
+    public SingletonSimple sS;
+
     public Text text;
     public int LVL;
     public GameObject DeathUI;
     public GameObject RegularUI;
     public GameObject WinUI;
     public int LvlNow;
+    public PlayerMovement pm;
+
+    public int currLvl;
     
     PlayerMovement PM;
     // Start is called before the first frame update
@@ -24,21 +32,16 @@ public class IUControls : MonoBehaviour
         WinUI.SetActive(false);
         LVL = SceneManager.GetActiveScene().buildIndex;
         LvlNow = LVL++;
-        LVLCheck();
+        
+
+
+       
     }
     void Start()
     {
 
-        
-       
     }
-    public void LVLCheck()
-    {
-        text.text = "Level " + LvlNow.ToString() ;
-       
-
-
-    }
+   
 
     public void Death()
     {
@@ -50,6 +53,7 @@ public class IUControls : MonoBehaviour
     {
         RegularUI.SetActive(false);
         WinUI.SetActive(true);
+
     }
     public void Restart()
     {
@@ -61,8 +65,22 @@ public class IUControls : MonoBehaviour
     }
     public void NextLvl()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
         PM.Live = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        currLvl += 1;
+
+        for (int i =0; i < LvlCount.Length; i++)
+        {
+            LvlCount[i].SetActive(i == sS.lvl);
+        }
+
+        
+
+        pm.NextLVL();
+
+        WinUI.SetActive(false);
+        RegularUI.SetActive(true);
     }
     public void MainMenu()
     {

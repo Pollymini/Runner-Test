@@ -11,13 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sand LVL 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sand LVL 2.unity
     guid: b52a004820312f14e9f068fb45cc69bb
+  - enabled: 0
+    path: Assets/Scenes/Sand LVL 3.unity
+    guid: 9b57e3b63762f2e4fae957ad560f99f3
+  - enabled: 0
+    path: Assets/Scenes/Sand LVL 4.unity
+    guid: 2a4bf073c735c284c9b745eaad0effb5
   - enabled: 1
     path: Assets/Scenes/Winter LVL 1.unity
     guid: 16cbaef5899c2c64e8dca3a25cf620e2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Winter LVL 2.unity
     guid: 56a3b756c1d631d41a679bd7c2624f3c
   - enabled: 1
