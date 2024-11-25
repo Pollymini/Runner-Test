@@ -8,8 +8,12 @@ namespace Dreamteck.Splines {
         [HideInInspector]
         public UpdateMethod updateMethod = UpdateMethod.Update;
 
+
+
         public SplineComputer spline
         {
+
+
             get {
                 return _spline;
             }
@@ -31,7 +35,8 @@ namespace Dreamteck.Splines {
                 }
             }
         }
-
+        
+        
         public double clipFrom
         {
             get
@@ -522,6 +527,13 @@ namespace Dreamteck.Splines {
                 RunUpdate();
                 LateRun();
             }
+            
+                
+                if (spline == null)
+                {
+                    spline = GameObject.FindWithTag("LVL").GetComponentInChildren<SplineComputer>();
+                }
+            
         }
 
         //Update logic for handling threads and rebuilding

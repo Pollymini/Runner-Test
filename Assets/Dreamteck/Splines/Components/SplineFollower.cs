@@ -7,6 +7,8 @@ namespace Dreamteck.Splines
     [AddComponentMenu("Dreamteck/Splines/Users/Spline Follower")]
     public class SplineFollower : SplineTracer
     {
+
+        
         public enum FollowMode { Uniform, Time }
         public enum Wrap { Default, Loop, PingPong }
         [HideInInspector]
@@ -15,7 +17,7 @@ namespace Dreamteck.Splines
         public FollowMode followMode = FollowMode.Uniform;
 
         [HideInInspector]
-        public bool autoStartPosition = false;
+        public bool autoStartPosition = true;
 
         [SerializeField]
         [HideInInspector]
@@ -57,6 +59,7 @@ namespace Dreamteck.Splines
                 }
             }
         }
+        
 
         public override Spline.Direction direction {
             get {
@@ -151,6 +154,9 @@ namespace Dreamteck.Splines
             {
                 SetPercent(spline.Project(GetTransform().position).percent);
             }
+
+            
+            
         }
 
         protected override void LateRun()
@@ -421,5 +427,7 @@ namespace Dreamteck.Splines
 
         [System.Serializable]
         public class FloatEvent : UnityEvent<float> { }
+
+        
     }
 }
