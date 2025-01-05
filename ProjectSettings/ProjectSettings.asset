@@ -919,7 +919,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -939,10 +945,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: bcab55ac-5989-40e6-94a4-87aaf473d449
+  cloudProjectId: d24c7c0f-e3f6-474c-99e7-c9f10eba7728
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Runner Test
+  projectName: Runner Test (1)
   organizationId: polly_mini
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
